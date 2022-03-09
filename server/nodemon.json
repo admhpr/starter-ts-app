@@ -1,3 +1,6 @@
 {
-    
+  "watch": ["src"],
+  "ignore": [],
+  "ext": "ts,js,json,graphql",
+  "exec": "tsc && tsc-alias && node ./dist/index.js"
 }
