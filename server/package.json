@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/node": "^17.0.21",
     "nodemon": "^2.0.15",
     "rimraf": "^3.0.2",
     "tsc-alias": "^1.6.4"
