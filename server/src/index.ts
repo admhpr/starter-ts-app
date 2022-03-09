@@ -1,12 +1,12 @@
 import http from "http";
-const PORT = "5000";
+const PORT = "8080";
 async function main() {
   http
     .createServer((_, response) => {
       response.writeHead(200, {
         "Content-Type": "text/plain",
       });
-      response.write("Hello, World!\n");
+      response.write("Hello Server!\n");
       response.end();
     })
     .listen(PORT);
