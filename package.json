@@ -5,7 +5,20 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev:server": "npm run dev --prefix server"
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:web\"",
+    "install:all": "npm i && npm i --prefix server && npm i --prefix web",
+    "dev:server": "npm run dev --prefix server",
+    "dev:web": "npm run dev --prefix web",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "src/**/*.{js,ts}": [
+      "npx eslint --fix",
+      "npx prettier --write"
+    ],
+    "*.{json,yml}": [
+      "prettier --write"
+    ]
   },
   "keywords": [],
   "author": "",
